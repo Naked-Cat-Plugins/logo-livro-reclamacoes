@@ -1,0 +1,40 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "logo-livro-reclamacoes/logo",
+	"title": "Livro de Reclamações Eletrónico",
+	"category": "widgets",
+	"icon": "megaphone",
+	"description": "Displays the official Livro de Reclamações Eletrónico logo, linked to livroreclamacoes.pt.",
+	"keywords": [ "livro de reclamações", "complaints book", "reclamações", "portugal" ],
+	"version": "0.1",
+	"textdomain": "logo-livro-reclamacoes",
+	"attributes": {
+		"lettersFilled": {
+			"type": "boolean",
+			"default": false
+		},
+		"color": {
+			"type": "string",
+			"default": "red"
+		},
+		"letterColor": {
+			"type": "string",
+			"default": ""
+		},
+		"width": {
+			"type": "string",
+			"default": ""
+		},
+		"openInNewTab": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": [ "left", "center", "right" ]
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

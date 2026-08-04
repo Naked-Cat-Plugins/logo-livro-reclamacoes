@@ -1,0 +1,17 @@
+{
+	"name": "logo-livro-reclamacoes",
+	"version": "0.1.0",
+	"description": "",
+	"author": "Naked Cat Plugins (by Webdados)",
+	"license": "GPL-3.0-or-later",
+	"main": "index.js",
+	"scripts": {
+		"build": "wp-scripts build --webpack-src-dir=src --output-path=build",
+		"start": "wp-scripts start --webpack-src-dir=src --output-path=build",
+		"make-pot": "wp i18n make-pot . languages/logo-livro-reclamacoes.pot --slug=logo-livro-reclamacoes --domain=logo-livro-reclamacoes --exclude=node_modules"
+	},
+	"keywords": [],
+	"devDependencies": {
+		"@wordpress/scripts": "^26.19.0"
+	}
+}
