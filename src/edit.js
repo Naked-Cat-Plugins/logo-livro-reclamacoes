@@ -1,5 +1,5 @@
 import { __ } from '@wordpress/i18n';
-import { InspectorControls } from '@wordpress/block-editor';
+import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
 import {
 	ColorPicker,
 	Disabled,
@@ -25,6 +25,12 @@ export default function Edit( { attributes, setAttributes } ) {
 	const normalizedColor = ( color || '' ).toLowerCase();
 	const isPreset = COLOR_PRESET_KEYS.includes( normalizedColor );
 	const isCustomColor = ! isPreset;
+
+	// Gives the editor canvas the same wrapper (class, align, custom className from the
+	// Advanced panel, ...) that a save()-based block would get automatically. Without this,
+	// the block renders at full canvas width in the editor instead of the theme's normal
+	// content width, and the alignment toolbar has nothing to actually apply itself to.
+	const blockProps = useBlockProps();
 
 	return (
 		<>
@@ -99,15 +105,23 @@ export default function Edit( { attributes, setAttributes } ) {
 				</PanelBody>
 			</InspectorControls>
 			{ /*
-			 * The rendered <a> should stay in the markup as-is (same render_html() PHP output as
-			 * the frontend), but must not actually navigate away while editing. <Disabled> makes
-			 * everything inside it inert (pointer-events, focusability) without stripping any
-			 * markup, which is the standard Gutenberg pattern for previewing content that
-			 * contains real interactive elements (links, buttons, form fields).
+			 * <figure> to match core/image's own wrapper tag (and the frontend markup
+			 * block_render() produces): our output is conceptually the same shape as a linked
+			 * image.
 			 */ }
-			<Disabled>
-				<ServerSideRender block="logo-livro-reclamacoes/logo" attributes={ attributes } />
-			</Disabled>
+			<figure { ...blockProps }>
+				{ /*
+				 * The rendered <a> should stay in the markup as-is (same render_html() PHP
+				 * output as the frontend), but must not actually navigate away while editing.
+				 * <Disabled> makes everything inside it inert (pointer-events, focusability)
+				 * without stripping any markup, the standard Gutenberg pattern for previewing
+				 * content that contains real interactive elements (links, buttons, form
+				 * fields).
+				 */ }
+				<Disabled>
+					<ServerSideRender block="logo-livro-reclamacoes/logo" attributes={ attributes } />
+				</Disabled>
+			</figure>
 		</>
 	);
 }

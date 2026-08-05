@@ -202,7 +202,8 @@ final class Logo_Livro_Reclamacoes {
 
 	/**
 	 * Block render_callback. Normalizes the block's camelCase attribute names to the same
-	 * snake_case keys the shortcode uses, then delegates to the same render_html().
+	 * snake_case keys the shortcode uses, delegates to the same render_html(), then wraps the
+	 * result in the standard block wrapper.
 	 *
 	 * @since 1.0
 	 *
@@ -212,7 +213,7 @@ final class Logo_Livro_Reclamacoes {
 	public function block_render( $attributes ) {
 		$attributes = is_array( $attributes ) ? $attributes : array();
 
-		return $this->render_html(
+		$inner_html = $this->render_html(
 			array(
 				'letters_filled' => isset( $attributes['lettersFilled'] ) ? $attributes['lettersFilled'] : false,
 				'color'          => isset( $attributes['color'] ) ? $attributes['color'] : 'red',
@@ -223,6 +224,23 @@ final class Logo_Livro_Reclamacoes {
 					: '_blank',
 			)
 		);
+
+		if ( '' === $inner_html ) {
+			return '';
+		}
+
+		// A dynamic (render_callback) block doesn't get wrapped automatically the way a
+		// save()-based block does. get_block_wrapper_attributes() pulls in everything the
+		// declared block supports (align, any custom class from the Advanced panel, HTML
+		// anchor, ...) so they actually take effect, both on the frontend and in the editor's
+		// ServerSideRender preview (both go through the same WP_Block::render()). Without
+		// this, the block also renders at full canvas width instead of the theme's normal
+		// content width, since it never gets the constraining "wp-block..." wrapper class.
+		//
+		// <figure> (not <div>) to match core/image's own markup: our output is conceptually
+		// the same shape as a linked image (a <figure> wrapping an <a> around the visual),
+		// and core/image itself wraps its <a><img/></a> in <figure class="wp-block-image">.
+		return sprintf( '<figure %1$s>%2$s</figure>', get_block_wrapper_attributes(), $inner_html );
 	}
 
 	/**

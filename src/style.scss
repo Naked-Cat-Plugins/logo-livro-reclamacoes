@@ -3,6 +3,36 @@
 	max-width: 100%;
 }
 
+// Mirrors core/image's own alignment CSS exactly (wp-includes/blocks/image/style.css):
+// self-contained float/margin/display:table rules scoped to our own block class, rather than
+// relying on a theme to provide generic .alignleft/.alignright/.aligncenter utility classes
+// (WordPress core itself doesn't define those generically either, only a bare
+// ".aligncenter { clear: both }"). This keeps behavior identical across themes, matching how
+// core/image protects itself from theme inconsistency.
+.wp-block-logo-livro-reclamacoes-logo {
+	&.alignleft,
+	&.alignright,
+	&.aligncenter {
+		display: table;
+	}
+
+	&.alignleft {
+		float: left;
+		margin: 0.5em 1em 0.5em 0;
+	}
+
+	&.alignright {
+		float: right;
+		margin: 0.5em 0 0.5em 1em;
+	}
+
+	&.aligncenter {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+}
+
 .livro-reclamacoes-logo {
 	display: block;
 	width: 100%;
