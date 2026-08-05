@@ -2,7 +2,7 @@
 /**
  * Main plugin class for Logo Livro de Reclamações Eletrónico
  *
- * Registers the [livro_reclamacoes] shortcode and the matching Gutenberg block, both of
+ * Registers the [livro_reclamacoes] shortcode and the matching block, both of
  * which build their markup through the same private render_html() method so the output is
  * always identical regardless of how the logo was placed on the page.
  *
@@ -148,7 +148,7 @@ final class Logo_Livro_Reclamacoes {
 	}
 
 	/**
-	 * Register the Gutenberg block, using the same block_render() render callback the
+	 * Register the block, using the same block_render() render callback the
 	 * shortcode ultimately shares logic with (see render_html()).
 	 *
 	 * @since 1.0

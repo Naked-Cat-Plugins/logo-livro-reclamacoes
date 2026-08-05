@@ -53,8 +53,8 @@ export default function Edit( { attributes, setAttributes } ) {
 						value={ isPreset ? normalizedColor : 'custom' }
 						options={ [
 							{ label: __( 'Red (official)', 'logo-livro-reclamacoes' ), value: 'red' },
-							{ label: __( 'Blue', 'logo-livro-reclamacoes' ), value: 'blue' },
-							{ label: __( 'Black', 'logo-livro-reclamacoes' ), value: 'black' },
+							{ label: __( 'Blue (official)', 'logo-livro-reclamacoes' ), value: 'blue' },
+							{ label: __( 'Black (official)', 'logo-livro-reclamacoes' ), value: 'black' },
 							{ label: __( 'White', 'logo-livro-reclamacoes' ), value: 'white' },
 							{ label: __( 'Custom…', 'logo-livro-reclamacoes' ), value: 'custom' },
 						] }
@@ -114,7 +114,7 @@ export default function Edit( { attributes, setAttributes } ) {
 				 * The rendered <a> should stay in the markup as-is (same render_html() PHP
 				 * output as the frontend), but must not actually navigate away while editing.
 				 * <Disabled> makes everything inside it inert (pointer-events, focusability)
-				 * without stripping any markup, the standard Gutenberg pattern for previewing
+				 * without stripping any markup, the standard block editor pattern for previewing
 				 * content that contains real interactive elements (links, buttons, form
 				 * fields).
 				 */ }
