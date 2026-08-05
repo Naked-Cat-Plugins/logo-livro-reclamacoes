@@ -42,16 +42,6 @@ phpcs --standard=.phpcs.xml.dist
 `testVersion="7.2-"` (matching the `Requires PHP` header), so it also flags anything that isn't
 actually compatible with the plugin's declared PHP floor.
 
-## Translations
-
-```bash
-npm run make-pot
-```
-
-Generates `languages/logo-livro-reclamacoes.pot`. Not shipped in the repo by default (kept
-generated-on-demand); WordPress.org-hosted plugins pick up translations from GlotPress
-automatically based on the `Text Domain` header, no bundled `.pot` is required.
-
 ## Building a local test ZIP
 
 ```bash
