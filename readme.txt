@@ -25,6 +25,18 @@ This plugin adds that logo to your site in two ways, a `[livro_reclamacoes]` sho
 
 This plugin works on any WordPress site, it has no dependency on WooCommerce or any other plugin.
 
+= Shortcode arguments =
+
+`[livro_reclamacoes]` accepts the following optional arguments, all shown here at their default value:
+
+* `letters_filled="no"`: set to `"yes"` to paint the “LIVRO DE” lettering inside the circle in a solid color instead of leaving it as transparent cutouts
+* `color="red"`: `red`, `blue`, `black`, `white`, or any hex color code (e.g. `color="#123456"`)
+* `letter_color=""`: hex color code for the inner lettering; only used when `letters_filled="yes"` **and** `color` is a custom hex code rather than one of the 4 named colors above (for those, the letter color is chosen automatically for contrast). Defaults to white when left empty
+* `width=""`: any CSS width value (e.g. `width="150px"`, `width="10em"`); leave empty for natural size. Height always scales automatically and the logo never exceeds the width of its container
+* `target="_blank"`: set to `"_self"` to open the link in the same tab instead of a new one
+
+Example: `[livro_reclamacoes letters_filled="yes" color="blue" width="150px" target="_self"]`
+
 == Installation ==
 
 1. Install and activate the plugin.

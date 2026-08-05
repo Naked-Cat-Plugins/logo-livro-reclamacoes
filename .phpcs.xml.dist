@@ -25,6 +25,8 @@
 	<arg name="colors"/>
 
 	<config name="minimum_supported_wp_version" value="6.2"/>
+	<!-- Matches the "Requires PHP" header in logo-livro-reclamacoes.php. -->
+	<config name="testVersion" value="7.2-"/>
 
 	<!-- WordPress Coding Standards -->
 	<rule ref="WordPress">
@@ -34,6 +36,9 @@
 		<!-- No Yoda conditions! -->
 		<exclude name="WordPress.PHP.YodaConditions.NotYoda"/>
 	</rule>
+
+	<!-- Flag code that isn't compatible with the "Requires PHP" floor above. -->
+	<rule ref="PHPCompatibilityWP"/>
 
 	<!-- Textdomain -->
 	<rule ref="WordPress.WP.I18n">
