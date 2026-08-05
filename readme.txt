@@ -42,6 +42,10 @@ Example: `[livro_reclamacoes letters_filled="yes" color="blue" width="150px" tar
 1. Install and activate the plugin.
 2. Add the `[livro_reclamacoes]` shortcode, or insert the “Livro de Reclamações Eletrónico” block, anywhere on your site (footer widget area, a page, etc.).
 
+= Legal disclaimer =
+
+This plugin helps you display the official “Livro de Reclamações Eletrónico” logo, linked to livroreclamacoes.pt. It does not guarantee that your site is legally compliant. Compliance depends on factors beyond this plugin's scope (where and how the logo is displayed, your business's own legal obligations, and any future changes to the law). Naked Cat Plugins and Webdados accept no legal responsibility for your site's compliance. If in doubt, consult a legal professional.
+
 == Frequently Asked Questions ==
 
 = Does this work without WooCommerce? =

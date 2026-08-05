@@ -6,6 +6,7 @@
 *.git*
 *.github*
 *.claude*
+*.marketing*
 *.wordpress-org*
 *.svn*
 *.distignore*

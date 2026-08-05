@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name:          Logo Livro de Reclamações Eletrónico
- * Plugin URI:
- * Description:          Adds the official "Livro de Reclamações Eletrónico" logo, linked to livroreclamacoes.pt, via a shortcode and a block, helping you comply with the disclosure requirement in Decreto-Lei 156/2005 (as amended by DL 74/2017, Art. 9.º-A).
+ * Plugin URI:           https://nakedcatplugins.com/free-wordpress-plugins/logo-livro-de-reclamacoes-eletronico/
+ * Description:          Adds the official “Livro de Reclamações Eletrónico” logo, linked to livroreclamacoes.pt, via a shortcode and a block, helping you comply with the disclosure requirement in Decreto-Lei 156/2005 (as amended by DL 74/2017, Art. 9.º-A).
  * Version:              0.1
  * Author:               Naked Cat Plugins (by Webdados)
  * Author URI:           https://nakedcatplugins.com
