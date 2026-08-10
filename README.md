@@ -1,4 +1,4 @@
-# Logo Livro de Reclamações Eletrónico
+# Compliance Logo and Link for Livro de Reclamações Eletrónico
 
 Adds the official "Livro de Reclamações Eletrónico" logo, linked to livroreclamacoes.pt, via a
 `[livro_reclamacoes]` shortcode and a matching block. See `readme.txt` for the WordPress.org

@@ -1,4 +1,4 @@
-=== Logo Livro de Reclamações Eletrónico ===
+=== Compliance Logo and Link for Livro de Reclamações Eletrónico ===
 Contributors: nakedcatplugins, webdados
 Tags: livro de reclamações, complaints book, portugal, legal, compliance
 Requires at least: 6.2
@@ -15,6 +15,8 @@ Displays the official “Livro de Reclamações Eletrónico” logo, linked to l
 Portuguese law (Decreto-Lei n.º 156/2005, as amended by Decreto-Lei n.º 74/2017, art. 9.º-A) requires businesses selling goods or services to consumers to provide visible, prominent access to the “Livro de Reclamações Eletrónico” on their website. Displaying the official logo, linked to livroreclamacoes.pt, is the standard way businesses satisfy this requirement.
 
 This plugin adds that logo to your site in two ways, a `[livro_reclamacoes]` shortcode and a matching block, both sharing the exact same rendering code so the result is identical everywhere you use it.
+
+This is an independent third-party plugin and is not affiliated with, endorsed by, or developed by the Direção-Geral do Consumidor or the Portuguese Government. “Livro de Reclamações Eletrónico” is the official name of the Portuguese electronic complaints book service.
 
 = Options =
 

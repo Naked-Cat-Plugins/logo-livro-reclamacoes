@@ -1,6 +1,6 @@
 <?php
 /**
- * Main plugin class for Logo Livro de Reclamações Eletrónico
+ * Main plugin class for Compliance Logo and Link for Livro de Reclamações Eletrónico
  *
  * Registers the [livro_reclamacoes] shortcode and the matching block, both of
  * which build their markup through the same private render_html() method so the output is
