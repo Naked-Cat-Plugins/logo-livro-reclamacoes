@@ -28,5 +28,5 @@ jobs:
       env:
         SVN_PASSWORD: ${{ secrets.NAKEDCAT_WPROG_SVN_PASSWORD }}
         SVN_USERNAME: ${{ secrets.NAKEDCAT_WPROG_SVN_USERNAME }}
-        SLUG: logo-livro-reclamacoes
+        SLUG: nakedcat-logo-livro-reclamacoes
         IGNORE_OTHER_FILES: true

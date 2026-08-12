@@ -1,14 +1,14 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "logo-livro-reclamacoes/logo",
+	"name": "nakedcat-logo-livro-reclamacoes/logo",
 	"title": "Livro de Reclamações Eletrónico",
 	"category": "widgets",
 	"icon": "megaphone",
 	"description": "Displays the official Livro de Reclamações Eletrónico logo, linked to livroreclamacoes.pt.",
 	"keywords": [ "livro de reclamações", "complaints book", "reclamações", "portugal" ],
 	"version": "0.1",
-	"textdomain": "logo-livro-reclamacoes",
+	"textdomain": "nakedcat-logo-livro-reclamacoes",
 	"attributes": {
 		"lettersFilled": {
 			"type": "boolean",

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ruleset name="logo-livro-reclamacoes">
+<ruleset name="nakedcat-logo-livro-reclamacoes">
 
 	<!-- Files to check. -->
 	<file>.</file>
@@ -25,7 +25,7 @@
 	<arg name="colors"/>
 
 	<config name="minimum_supported_wp_version" value="6.2"/>
-	<!-- Matches the "Requires PHP" header in logo-livro-reclamacoes.php. -->
+	<!-- Matches the "Requires PHP" header in nakedcat-logo-livro-reclamacoes.php. -->
 	<config name="testVersion" value="7.2-"/>
 
 	<!-- WordPress Coding Standards -->
@@ -45,7 +45,7 @@
 		<properties>
 			<!-- Set the Text Domain -->
 			<property name="text_domain" type="array">
-				<element value="logo-livro-reclamacoes"/>
+				<element value="nakedcat-logo-livro-reclamacoes"/>
 			</property>
 		</properties>
 	</rule>

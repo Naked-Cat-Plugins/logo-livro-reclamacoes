@@ -36,27 +36,27 @@ export default function Edit( { attributes, setAttributes } ) {
 		<>
 			<InspectorControls>
 				<PanelBody
-					title={ __( 'Livro de Reclamações Settings', 'logo-livro-reclamacoes' ) }
+					title={ __( 'Livro de Reclamações Settings', 'nakedcat-logo-livro-reclamacoes' ) }
 					initialOpen={ true }
 				>
 					<ToggleControl
-						label={ __( 'Fill inner letters', 'logo-livro-reclamacoes' ) }
+						label={ __( 'Fill inner letters', 'nakedcat-logo-livro-reclamacoes' ) }
 						help={ __(
 							'When on, the “LIVRO DE” lettering inside the circle is painted in a solid color instead of left as transparent cutouts.',
-							'logo-livro-reclamacoes'
+							'nakedcat-logo-livro-reclamacoes'
 						) }
 						checked={ !! lettersFilled }
 						onChange={ ( value ) => setAttributes( { lettersFilled: value } ) }
 					/>
 					<SelectControl
-						label={ __( 'Color', 'logo-livro-reclamacoes' ) }
+						label={ __( 'Color', 'nakedcat-logo-livro-reclamacoes' ) }
 						value={ isPreset ? normalizedColor : 'custom' }
 						options={ [
-							{ label: __( 'Red (official)', 'logo-livro-reclamacoes' ), value: 'red' },
-							{ label: __( 'Blue (official)', 'logo-livro-reclamacoes' ), value: 'blue' },
-							{ label: __( 'Black (official)', 'logo-livro-reclamacoes' ), value: 'black' },
-							{ label: __( 'White', 'logo-livro-reclamacoes' ), value: 'white' },
-							{ label: __( 'Custom…', 'logo-livro-reclamacoes' ), value: 'custom' },
+							{ label: __( 'Red (official)', 'nakedcat-logo-livro-reclamacoes' ), value: 'red' },
+							{ label: __( 'Blue (official)', 'nakedcat-logo-livro-reclamacoes' ), value: 'blue' },
+							{ label: __( 'Black (official)', 'nakedcat-logo-livro-reclamacoes' ), value: 'black' },
+							{ label: __( 'White', 'nakedcat-logo-livro-reclamacoes' ), value: 'white' },
+							{ label: __( 'Custom…', 'nakedcat-logo-livro-reclamacoes' ), value: 'custom' },
 						] }
 						onChange={ ( value ) =>
 							setAttributes( {
@@ -76,7 +76,7 @@ export default function Edit( { attributes, setAttributes } ) {
 							<p>
 								{ __(
 									'Letter color (only used with a custom logo color):',
-									'logo-livro-reclamacoes'
+									'nakedcat-logo-livro-reclamacoes'
 								) }
 							</p>
 							<ColorPicker
@@ -87,18 +87,18 @@ export default function Edit( { attributes, setAttributes } ) {
 						</>
 					) }
 					<UnitControl
-						label={ __( 'Width', 'logo-livro-reclamacoes' ) }
+						label={ __( 'Width', 'nakedcat-logo-livro-reclamacoes' ) }
 						help={ __(
 							'Leave empty for natural size (always capped at 100% of its container; height is always automatic).',
-							'logo-livro-reclamacoes'
+							'nakedcat-logo-livro-reclamacoes'
 						) }
-						placeholder={ __( 'auto', 'logo-livro-reclamacoes' ) }
+						placeholder={ __( 'auto', 'nakedcat-logo-livro-reclamacoes' ) }
 						units={ SIZE_UNITS }
 						value={ width }
 						onChange={ ( value ) => setAttributes( { width: value ?? '' } ) }
 					/>
 					<ToggleControl
-						label={ __( 'Open in new tab', 'logo-livro-reclamacoes' ) }
+						label={ __( 'Open in new tab', 'nakedcat-logo-livro-reclamacoes' ) }
 						checked={ !! openInNewTab }
 						onChange={ ( value ) => setAttributes( { openInNewTab: value } ) }
 					/>
@@ -119,7 +119,7 @@ export default function Edit( { attributes, setAttributes } ) {
 				 * fields).
 				 */ }
 				<Disabled>
-					<ServerSideRender block="logo-livro-reclamacoes/logo" attributes={ attributes } />
+					<ServerSideRender block="nakedcat-logo-livro-reclamacoes/logo" attributes={ attributes } />
 				</Disabled>
 			</figure>
 		</>

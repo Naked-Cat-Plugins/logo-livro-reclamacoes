@@ -1,5 +1,5 @@
 {
-	"name": "logo-livro-reclamacoes",
+	"name": "nakedcat-logo-livro-reclamacoes",
 	"version": "0.1.0",
 	"description": "",
 	"author": "Naked Cat Plugins (by Webdados)",
@@ -9,7 +9,7 @@
 		"build": "wp-scripts build --webpack-src-dir=src --output-path=build && npm run copy-index",
 		"start": "wp-scripts start --webpack-src-dir=src --output-path=build",
 		"copy-index": "cp src/index.php build/index.php",
-		"make-pot": "wp i18n make-pot . languages/logo-livro-reclamacoes.pot --slug=logo-livro-reclamacoes --domain=logo-livro-reclamacoes --exclude=node_modules"
+		"make-pot": "wp i18n make-pot . languages/nakedcat-logo-livro-reclamacoes.pot --slug=nakedcat-logo-livro-reclamacoes --domain=nakedcat-logo-livro-reclamacoes --exclude=node_modules"
 	},
 	"keywords": [],
 	"devDependencies": {

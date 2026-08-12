@@ -1,4 +1,4 @@
-# Compliance Logo and Link for Livro de Reclamações Eletrónico
+# Naked Cat Plugins Logo for Livro de Reclamações Eletrónico
 
 Adds the official "Livro de Reclamações Eletrónico" logo, linked to livroreclamacoes.pt, via a
 `[livro_reclamacoes]` shortcode and a matching block. See `readme.txt` for the WordPress.org
@@ -49,8 +49,8 @@ actually compatible with the plugin's declared PHP floor.
 ```
 
 Reads `.distignore`, converts it into `zip -x` exclusions, and zips the plugin folder (from its
-parent directory) into `../logo-livro-reclamacoes.zip`, with the plugin's files nested inside a
-`logo-livro-reclamacoes/` folder in the ZIP (not loose at the root), matching what WordPress.org's
+parent directory) into `../nakedcat-logo-livro-reclamacoes.zip`, with the plugin's files nested inside a
+`nakedcat-logo-livro-reclamacoes/` folder in the ZIP (not loose at the root), matching what WordPress.org's
 SVN deploy produces. Run `npm run build` first, since `build/` isn't excluded and needs to already
 exist for the ZIP to be functional.
 
@@ -58,20 +58,20 @@ exist for the ZIP to be functional.
 
 If you extract the ZIP into `wp-content/plugins/` while this repo's own checkout is already
 installed under the same folder name, the OS will auto-rename the extracted copy (e.g. to
-`logo-livro-reclamacoes 2`), and WordPress.org's [Plugin Check](https://wordpress.org/plugins/plugin-check/)
+`nakedcat-logo-livro-reclamacoes 2`), and WordPress.org's [Plugin Check](https://wordpress.org/plugins/plugin-check/)
 will report a false-positive `textdomain_mismatch` (it compares the `Text Domain` header against
 the actual install folder name). To test cleanly: temporarily move the dev checkout aside, extract
 the ZIP under the exact real slug name, run the check, then move the dev checkout back.
 
 ```bash
-wp plugin deactivate logo-livro-reclamacoes
-mv wp-content/plugins/logo-livro-reclamacoes wp-content/plugins/logo-livro-reclamacoes-dev-backup
-unzip logo-livro-reclamacoes.zip -d wp-content/plugins/
-wp plugin check logo-livro-reclamacoes
+wp plugin deactivate nakedcat-logo-livro-reclamacoes
+mv wp-content/plugins/nakedcat-logo-livro-reclamacoes wp-content/plugins/nakedcat-logo-livro-reclamacoes-dev-backup
+unzip nakedcat-logo-livro-reclamacoes.zip -d wp-content/plugins/
+wp plugin check nakedcat-logo-livro-reclamacoes
 # restore afterwards
-rm -rf wp-content/plugins/logo-livro-reclamacoes
-mv wp-content/plugins/logo-livro-reclamacoes-dev-backup wp-content/plugins/logo-livro-reclamacoes
-wp plugin activate logo-livro-reclamacoes
+rm -rf wp-content/plugins/nakedcat-logo-livro-reclamacoes
+mv wp-content/plugins/nakedcat-logo-livro-reclamacoes-dev-backup wp-content/plugins/nakedcat-logo-livro-reclamacoes
+wp plugin activate nakedcat-logo-livro-reclamacoes
 ```
 
 ## Releasing to WordPress.org

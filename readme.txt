@@ -1,4 +1,4 @@
-=== Compliance Logo and Link for Livro de Reclamações Eletrónico ===
+=== Naked Cat Plugins Logo for Livro de Reclamações Eletrónico ===
 Contributors: nakedcatplugins, webdados
 Tags: livro de reclamações, complaints book, portugal, legal, compliance
 Requires at least: 6.2

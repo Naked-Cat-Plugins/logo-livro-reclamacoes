@@ -1,0 +1,150 @@
+# Copyright (C) 2026 Naked Cat Plugins (by Webdados)
+# This file is distributed under the GPLv3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Naked Cat Plugins Logo for Livro de Reclamações Eletrónico 0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/nakedcat-logo-livro-reclamacoes\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-12T09:08:33+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.13.0-alpha-2616ff0\n"
+"X-Domain: nakedcat-logo-livro-reclamacoes\n"
+
+#. Plugin Name of the plugin
+#: nakedcat-logo-livro-reclamacoes.php:3
+msgid "Naked Cat Plugins Logo for Livro de Reclamações Eletrónico"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: nakedcat-logo-livro-reclamacoes.php:4
+msgid "https://nakedcatplugins.com/free-wordpress-plugins/logo-livro-de-reclamacoes-eletronico/"
+msgstr ""
+
+#. Description of the plugin
+#: nakedcat-logo-livro-reclamacoes.php:5
+msgid "Adds the official “Livro de Reclamações Eletrónico” logo, linked to livroreclamacoes.pt, via a shortcode and a block, helping you comply with the disclosure requirement in Decreto-Lei 156/2005 (as amended by DL 74/2017, Art. 9.º-A)."
+msgstr ""
+
+#. Author of the plugin
+#: nakedcat-logo-livro-reclamacoes.php:7
+msgid "Naked Cat Plugins (by Webdados)"
+msgstr ""
+
+#. Author URI of the plugin
+#: nakedcat-logo-livro-reclamacoes.php:8
+msgid "https://nakedcatplugins.com"
+msgstr ""
+
+#: includes/class-nakedcat-logo-livro-reclamacoes.php:327
+msgid "Livro de Reclamações Eletrónico"
+msgstr ""
+
+#: build/index.js:1
+#: src/edit.js:39
+msgid "Livro de Reclamações Settings"
+msgstr ""
+
+#: build/index.js:1
+#: src/edit.js:43
+msgid "Fill inner letters"
+msgstr ""
+
+#: build/index.js:1
+#: src/edit.js:44
+msgid "When on, the “LIVRO DE” lettering inside the circle is painted in a solid color instead of left as transparent cutouts."
+msgstr ""
+
+#: build/index.js:1
+#: src/edit.js:52
+msgid "Color"
+msgstr ""
+
+#: build/index.js:1
+#: src/edit.js:55
+msgid "Red (official)"
+msgstr ""
+
+#: build/index.js:1
+#: src/edit.js:56
+msgid "Blue (official)"
+msgstr ""
+
+#: build/index.js:1
+#: src/edit.js:57
+msgid "Black (official)"
+msgstr ""
+
+#: build/index.js:1
+#: src/edit.js:58
+msgid "White"
+msgstr ""
+
+#: build/index.js:1
+#: src/edit.js:59
+msgid "Custom…"
+msgstr ""
+
+#: build/index.js:1
+#: src/edit.js:77
+msgid "Letter color (only used with a custom logo color):"
+msgstr ""
+
+#: build/index.js:1
+#: src/edit.js:90
+msgid "Width"
+msgstr ""
+
+#: build/index.js:1
+#: src/edit.js:91
+msgid "Leave empty for natural size (always capped at 100% of its container; height is always automatic)."
+msgstr ""
+
+#: build/index.js:1
+#: src/edit.js:95
+msgid "auto"
+msgstr ""
+
+#: build/index.js:1
+#: src/edit.js:101
+msgid "Open in new tab"
+msgstr ""
+
+#: build/block.json
+#: src/block.json
+msgctxt "block title"
+msgid "Livro de Reclamações Eletrónico"
+msgstr ""
+
+#: build/block.json
+#: src/block.json
+msgctxt "block description"
+msgid "Displays the official Livro de Reclamações Eletrónico logo, linked to livroreclamacoes.pt."
+msgstr ""
+
+#: build/block.json
+#: src/block.json
+msgctxt "block keyword"
+msgid "livro de reclamações"
+msgstr ""
+
+#: build/block.json
+#: src/block.json
+msgctxt "block keyword"
+msgid "complaints book"
+msgstr ""
+
+#: build/block.json
+#: src/block.json
+msgctxt "block keyword"
+msgid "reclamações"
+msgstr ""
+
+#: build/block.json
+#: src/block.json
+msgctxt "block keyword"
+msgid "portugal"
+msgstr ""

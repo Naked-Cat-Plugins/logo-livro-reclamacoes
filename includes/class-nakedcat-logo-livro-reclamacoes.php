@@ -1,6 +1,6 @@
 <?php
 /**
- * Main plugin class for Compliance Logo and Link for Livro de Reclamações Eletrónico
+ * Main plugin class for Naked Cat Plugins Logo for Livro de Reclamações Eletrónico
  *
  * Registers the [livro_reclamacoes] shortcode and the matching block, both of
  * which build their markup through the same private render_html() method so the output is
@@ -9,7 +9,7 @@
  * @since 1.0
  */
 
-namespace NakedCatPlugins\LogoLivroReclamacoes;
+namespace NakedCatPlugins\Nakedcat_Logo_Livro_Reclamacoes;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Our main class
  */
-final class Logo_Livro_Reclamacoes {
+final class Nakedcat_Logo_Livro_Reclamacoes {
 
 	/**
 	 * The Livro de Reclamações Eletrónico platform URL. Always fixed, never configurable.
@@ -30,7 +30,7 @@ final class Logo_Livro_Reclamacoes {
 	/**
 	 * The singleton instance.
 	 *
-	 * @var Logo_Livro_Reclamacoes|null
+	 * @var Nakedcat_Logo_Livro_Reclamacoes|null
 	 */
 	protected static $instance = null;
 
@@ -99,7 +99,7 @@ final class Logo_Livro_Reclamacoes {
 	 * Get the singleton instance.
 	 *
 	 * @since 1.0
-	 * @return Logo_Livro_Reclamacoes The singleton instance.
+	 * @return Nakedcat_Logo_Livro_Reclamacoes The singleton instance.
 	 */
 	public static function get_instance() {
 		if ( null === self::$instance ) {
@@ -140,7 +140,7 @@ final class Logo_Livro_Reclamacoes {
 			return;
 		}
 		wp_enqueue_style(
-			'logo-livro-reclamacoes',
+			'nakedcat-logo-livro-reclamacoes',
 			plugins_url( 'build/style-index.css', NAKEDCATPLUGINS_LOGO_LIVRO_RECLAMACOES_FILE ),
 			array(),
 			filemtime( $file )
@@ -324,7 +324,7 @@ final class Logo_Livro_Reclamacoes {
 			esc_url( self::URL ),
 			esc_attr( $target ),
 			$rel,
-			esc_attr__( 'Livro de Reclamações Eletrónico', 'logo-livro-reclamacoes' ),
+			esc_attr__( 'Livro de Reclamações Eletrónico', 'nakedcat-logo-livro-reclamacoes' ),
 			esc_attr( $wrapper_style ),
 			$svg
 		);
