@@ -1,4 +1,4 @@
-# Naked Cat Plugins Logo for Livro de Reclamações Eletrónico
+# Naked Cat Logo for Livro de Reclamações Eletrónico
 
 Adds the official "Livro de Reclamações Eletrónico" logo, linked to livroreclamacoes.pt, via a
 `[livro_reclamacoes]` shortcode and a matching block. See `readme.txt` for the WordPress.org

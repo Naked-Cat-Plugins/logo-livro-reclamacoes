@@ -1,6 +1,6 @@
 <?php
 /**
- * Main plugin class for Naked Cat Plugins Logo for Livro de Reclamações Eletrónico
+ * Main plugin class for Naked Cat Logo for Livro de Reclamações Eletrónico
  *
  * Registers the [livro_reclamacoes] shortcode and the matching block, both of
  * which build their markup through the same private render_html() method so the output is
@@ -339,8 +339,18 @@ final class Nakedcat_Logo_Livro_Reclamacoes {
 	 *
 	 * Only the two bundled, developer-controlled SVG files are ever read here, never a
 	 * user-supplied path, and the only dynamic values interpolated into the raw markup are
-	 * already-validated hex color strings and a wp_unique_id() suffix, so this is safe without
-	 * needing wp_kses on the whole markup.
+	 * already-validated hex color strings and a wp_unique_id() suffix. The result is still run
+	 * through wp_kses() with an allow-list scoped to exactly the tags/attributes the bundled
+	 * files use (see get_allowed_svg_html()), so the markup this method returns is provably
+	 * escaped rather than relying only on the above argument.
+	 *
+	 * wp_kses() normalizes two things that are irrelevant to rendering: attribute names are
+	 * lowercased (e.g. viewBox becomes viewbox) and self-closing tags get a space before the
+	 * slash. Neither changes what's drawn on screen - browsers parse inline SVG through HTML's
+	 * "adjust SVG attributes" step, which maps a fixed table of lowercased attribute names
+	 * (including viewbox) back to their correct SVG casing, and self-closing slash spacing has
+	 * no parsing significance either way. Verified directly in Chrome: a lowercased-viewbox copy
+	 * of this markup scales and renders pixel-identically to the original.
 	 *
 	 * @since 1.0
 	 *
@@ -398,7 +408,40 @@ final class Nakedcat_Logo_Livro_Reclamacoes {
 			);
 		}
 
-		return $svg;
+		return wp_kses( $svg, $this->get_allowed_svg_html() );
+	}
+
+	/**
+	 * Use wp_kses() allow-list for get_svg_markup(), scoped to exactly the elements and attributes
+	 * present in the two bundled SVG files, nothing wider.
+	 *
+	 * @since 1.0
+	 * @return array
+	 */
+	private function get_allowed_svg_html() {
+		return array(
+			'svg'    => array(
+				'xmlns'       => true,
+				'id'          => true,
+				'class'       => true,
+				'version'     => true,
+				'viewBox'     => true,
+				'aria-hidden' => true,
+				'focusable'   => true,
+			),
+			'defs'   => array(),
+			'style'  => array(),
+			'path'   => array(
+				'd'     => true,
+				'class' => true,
+			),
+			'circle' => array(
+				'cx'    => true,
+				'cy'    => true,
+				'r'     => true,
+				'class' => true,
+			),
+		);
 	}
 
 	/**

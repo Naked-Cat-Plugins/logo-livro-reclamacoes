@@ -2,21 +2,21 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Naked Cat Plugins Logo for Livro de Reclamações Eletrónico 0.1\n"
+"Project-Id-Version: Naked Cat Logo for Livro de Reclamações Eletrónico 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/nakedcat-logo-livro-reclamacoes\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-12T09:08:33+00:00\n"
+"POT-Creation-Date: 2026-08-14T13:56:52+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.13.0-alpha-2616ff0\n"
 "X-Domain: nakedcat-logo-livro-reclamacoes\n"
 
 #. Plugin Name of the plugin
 #: nakedcat-logo-livro-reclamacoes.php:3
-msgid "Naked Cat Plugins Logo for Livro de Reclamações Eletrónico"
+msgid "Naked Cat Logo for Livro de Reclamações Eletrónico"
 msgstr ""
 
 #. Plugin URI of the plugin
