@@ -4,7 +4,7 @@ Tags: livro de reclamações, complaints book, portugal, legal, compliance
 Requires at least: 6.2
 Tested up to: 7.1
 Requires PHP: 7.2
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -87,8 +87,8 @@ You can report any security bugs found in the source code of this plugin through
 == Changelog ==
 
 = 1.1 - 2026-08-16 =
-* Fix the logo being displayed cut off: the `viewBox` attribute was being stripped from the SVG, leaving it without a coordinate system to scale to
-* New block icon, showing the logo itself in the block editor, and a more fitting icon on the WordPress.org plugin page
+* [NEW] Block icon, showing the logo itself in the block editor, and a more fitting icon on the WordPress.org plugin page
+* [TWEAK] readme.txt legal and other plugins sections
 
 = 1.0 - 2026-08-16 =
 * Initial release
