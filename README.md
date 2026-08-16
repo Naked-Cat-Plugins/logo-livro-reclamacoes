@@ -42,22 +42,14 @@ phpcs --standard=.phpcs.xml.dist
 `testVersion="7.2-"` (matching the `Requires PHP` header), so it also flags anything that isn't
 actually compatible with the plugin's declared PHP floor.
 
-## Building a local test ZIP
+## Testing a release build with Plugin Check
 
-```bash
-./createzip.command
-```
+To check what users actually install, test the built ZIP rather than this checkout, since the
+checkout carries dev files that never ship. Download the released ZIP from
+`https://downloads.wordpress.org/plugin/nakedcat-logo-livro-reclamacoes.<version>.zip`.
 
-Reads `.distignore`, converts it into `zip -x` exclusions, and zips the plugin folder (from its
-parent directory) into `../nakedcat-logo-livro-reclamacoes.zip`, with the plugin's files nested inside a
-`nakedcat-logo-livro-reclamacoes/` folder in the ZIP (not loose at the root), matching what WordPress.org's
-SVN deploy produces. Run `npm run build` first, since `build/` isn't excluded and needs to already
-exist for the ZIP to be functional.
-
-### Testing that ZIP with Plugin Check
-
-If you extract the ZIP into `wp-content/plugins/` while this repo's own checkout is already
-installed under the same folder name, the OS will auto-rename the extracted copy (e.g. to
+If you extract it into `wp-content/plugins/` while this repo's own checkout is already installed
+under the same folder name, the OS will auto-rename the extracted copy (e.g. to
 `nakedcat-logo-livro-reclamacoes 2`), and WordPress.org's [Plugin Check](https://wordpress.org/plugins/plugin-check/)
 will report a false-positive `textdomain_mismatch` (it compares the `Text Domain` header against
 the actual install folder name). To test cleanly: temporarily move the dev checkout aside, extract
