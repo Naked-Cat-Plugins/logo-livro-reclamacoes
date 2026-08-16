@@ -352,6 +352,13 @@ final class Nakedcat_Logo_Livro_Reclamacoes {
 	 * no parsing significance either way. Verified directly in Chrome: a lowercased-viewbox copy
 	 * of this markup scales and renders pixel-identically to the original.
 	 *
+	 * That lowercasing does matter in one place though: the allow-list in
+	 * get_allowed_svg_html() has to spell viewbox lowercase too, because wp_kses() compares the
+	 * already-lowercased attribute name against those keys case-sensitively. Spelling the key
+	 * "viewBox" drops the attribute instead of keeping it, which leaves the SVG with no
+	 * coordinate system, so it falls back to the 300x150 default replaced-element size and the
+	 * artwork gets clipped. That regression shipped in 1.0.
+	 *
 	 * @since 1.0
 	 *
 	 * @param bool   $filled       True for the filled variant (assets/livro-reclamacoes-2.svg),
@@ -425,7 +432,10 @@ final class Nakedcat_Logo_Livro_Reclamacoes {
 				'id'          => true,
 				'class'       => true,
 				'version'     => true,
-				'viewBox'     => true,
+				// Must be spelled lowercase here: wp_kses() lowercases the incoming attribute name
+				// before matching it against this list, and the match is case-sensitive, so a
+				// "viewBox" key silently drops the attribute and the logo renders clipped.
+				'viewbox'     => true,
 				'aria-hidden' => true,
 				'focusable'   => true,
 			),

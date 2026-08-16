@@ -4,10 +4,10 @@
 	"name": "nakedcat-logo-livro-reclamacoes/logo",
 	"title": "Livro de Reclamações Eletrónico",
 	"category": "widgets",
-	"icon": "megaphone",
+	"icon": "book-alt",
 	"description": "Displays the official Livro de Reclamações Eletrónico logo, linked to livroreclamacoes.pt.",
 	"keywords": [ "livro de reclamações", "complaints book", "reclamações", "portugal" ],
-	"version": "0.1",
+	"version": "1.0",
 	"textdomain": "nakedcat-logo-livro-reclamacoes",
 	"attributes": {
 		"lettersFilled": {
