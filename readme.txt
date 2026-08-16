@@ -4,7 +4,7 @@ Tags: livro de reclamações, complaints book, portugal, legal, compliance
 Requires at least: 6.2
 Tested up to: 7.1
 Requires PHP: 7.2
-Stable tag: 0.1
+Stable tag: 1.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -65,5 +65,5 @@ You can report any security bugs found in the source code of this plugin through
 
 == Changelog ==
 
-= 0.1 =
+= 1.0 - 2026-08-16 =
 * Initial release
