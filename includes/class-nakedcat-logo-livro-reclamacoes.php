@@ -347,7 +347,7 @@ final class Nakedcat_Logo_Livro_Reclamacoes {
 	 *
 	 * Only the two bundled, developer-controlled SVG files are ever read here, never a
 	 * user-supplied path, and the only dynamic values interpolated into the raw markup are
-	 * already-validated hex color strings and a wp_unique_id() suffix. The result is still run
+	 * already-validated hex color strings, escaped again on the way in. The result is still run
 	 * through wp_kses() with an allow-list scoped to exactly the tags/attributes the bundled
 	 * files use (see get_allowed_svg_html()), so the markup this method returns is provably
 	 * escaped rather than relying only on the above argument.
