@@ -313,8 +313,7 @@ final class Nakedcat_Logo_Livro_Reclamacoes {
 		$target = '_self' === $args['target'] ? '_self' : '_blank';
 		$rel    = '_blank' === $target ? ' rel="noopener"' : '';
 
-		$unique_id = wp_unique_id( 'livro-reclamacoes-logo-' );
-		$svg       = $this->get_svg_markup( $filled, $color, $letter_color, $unique_id );
+		$svg = $this->get_svg_markup( $filled, $color, $letter_color );
 		if ( '' === $svg ) {
 			return '';
 		}
@@ -331,11 +330,20 @@ final class Nakedcat_Logo_Livro_Reclamacoes {
 	}
 
 	/**
-	 * Loads one of the two bundled SVGs and makes it safe to reuse multiple times on the same
-	 * page: gives this instance's <svg> a unique id (the class name itself has no per-instance
-	 * placeholder, only the id does), then rewrites the fill-color CSS rule(s) - which are
-	 * page-global scoped even though they live inside an inline <svg> - so they're scoped to
-	 * that id instead of the bare class name.
+	 * Loads one of the two bundled SVGs and colors it by writing the fill straight onto the
+	 * elements as attributes, dropping the <defs><style> rule and the <svg> id along with it.
+	 *
+	 * Earlier versions instead kept that <style> block and scoped its selector to a per-instance
+	 * wp_unique_id(). That is safe on the front end, where every logo on the page is rendered in
+	 * one request and the counter really does hand out distinct ids, but it breaks in the block
+	 * editor: ServerSideRender fetches each block through its own REST request, wp_unique_id() is
+	 * a per-request in-memory counter, so every block came back as "livro-reclamacoes-logo-1". A
+	 * <style> inside inline SVG is document-global, so with the ids duplicated each block's rule
+	 * matched every logo on the canvas and the last one in DOM order won: put three differently
+	 * colored logos in a post and the editor painted all three the same. Fixed in 1.2.
+	 *
+	 * Attributes avoid that whole class of problem: nothing is injected into the document's CSS,
+	 * so there is no selector to collide and no id to duplicate.
 	 *
 	 * Only the two bundled, developer-controlled SVG files are ever read here, never a
 	 * user-supplied path, and the only dynamic values interpolated into the raw markup are
@@ -366,10 +374,9 @@ final class Nakedcat_Logo_Livro_Reclamacoes {
 	 * @param string $color        Already-validated hex color for the circle + outer wordmark.
 	 * @param string $letter_color Already-validated hex color for the inner lettering, only
 	 *                             applied when $filled is true.
-	 * @param string $unique_id    Unique id for this instance's <svg> root.
 	 * @return string SVG markup, or '' if the source file couldn't be read.
 	 */
-	private function get_svg_markup( $filled, $color, $letter_color, $unique_id ) {
+	private function get_svg_markup( $filled, $color, $letter_color ) {
 		$variant = $filled ? '2' : '1';
 
 		if ( ! isset( $this->svg_cache[ $variant ] ) ) {
@@ -388,32 +395,36 @@ final class Nakedcat_Logo_Livro_Reclamacoes {
 			return '';
 		}
 
-		// Unique id on the <svg> root (keep the fixed "livro-reclamacoes-logo" class as-is) and
-		// mark it decorative for assistive tech - the wrapping <a> already carries a text
-		// aria-label, and the mark itself has no real text nodes for a screen reader.
+		// Drop the placeholder id (nothing targets it any more, and repeating it once per logo
+		// would put duplicate ids in the document) and mark the mark decorative for assistive
+		// tech - the wrapping <a> already carries a text aria-label, and there are no real text
+		// nodes here for a screen reader.
 		$svg = str_replace(
 			'id="livro-reclamacoes-logo-x"',
-			'id="' . esc_attr( $unique_id ) . '" aria-hidden="true" focusable="false"',
+			'aria-hidden="true" focusable="false"',
 			$svg
 		);
 
-		// Scope + recolor the shared fill rule (circle + outer wordmark) to this instance only.
-		$svg = preg_replace(
-			'/\.livro-reclamacoes-fill\{fill:#[0-9a-fA-F]{3,6}\}/',
-			'#' . $unique_id . ' .livro-reclamacoes-fill{fill:' . $color . '}',
-			$svg,
-			1
-		);
-
-		// Filled variant only: scope + recolor the inner "LIVRO DE" lettering rule.
+		// The <style> rule these classes referred to is gone, so the color now rides on each
+		// element instead. Replace the inner lettering first: its class name starts with the
+		// same characters as the general one, and only the closing quote tells them apart.
 		if ( $filled ) {
-			$svg = preg_replace(
-				'/\.livro-reclamacoes-fill-letters-circle\{fill:#[0-9a-fA-F]{3,6}\}/',
-				'#' . $unique_id . ' .livro-reclamacoes-fill-letters-circle{fill:' . $letter_color . '}',
-				$svg,
-				1
+			$svg = str_replace(
+				'class="livro-reclamacoes-fill-letters-circle"',
+				'fill="' . esc_attr( $letter_color ) . '"',
+				$svg
 			);
 		}
+
+		$svg = str_replace(
+			'class="livro-reclamacoes-fill"',
+			'fill="' . esc_attr( $color ) . '"',
+			$svg
+		);
+
+		// Strip the now-unused <defs><style>...</style></defs>. Left in place it would still be a
+		// document-global rule matching .livro-reclamacoes-fill on every other logo on the page.
+		$svg = preg_replace( '#\s*<defs>.*?</defs>#s', '', $svg, 1 );
 
 		return wp_kses( $svg, $this->get_allowed_svg_html() );
 	}
@@ -426,10 +437,12 @@ final class Nakedcat_Logo_Livro_Reclamacoes {
 	 * @return array
 	 */
 	private function get_allowed_svg_html() {
+		// No 'defs'/'style' here on purpose: the fill is written onto each element as an
+		// attribute, so nothing needs a document-global CSS rule any more, and not allowing
+		// <style> through kses at all is one less way for markup to reach into the page.
 		return array(
 			'svg'    => array(
 				'xmlns'       => true,
-				'id'          => true,
 				'class'       => true,
 				'version'     => true,
 				// Must be spelled lowercase here: wp_kses() lowercases the incoming attribute name
@@ -439,17 +452,15 @@ final class Nakedcat_Logo_Livro_Reclamacoes {
 				'aria-hidden' => true,
 				'focusable'   => true,
 			),
-			'defs'   => array(),
-			'style'  => array(),
 			'path'   => array(
-				'd'     => true,
-				'class' => true,
+				'd'    => true,
+				'fill' => true,
 			),
 			'circle' => array(
-				'cx'    => true,
-				'cy'    => true,
-				'r'     => true,
-				'class' => true,
+				'cx'   => true,
+				'cy'   => true,
+				'r'    => true,
+				'fill' => true,
 			),
 		);
 	}

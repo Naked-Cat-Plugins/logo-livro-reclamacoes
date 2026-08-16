@@ -7,7 +7,7 @@
 	"icon": "book-alt",
 	"description": "Displays the official Livro de Reclamações Eletrónico logo, linked to livroreclamacoes.pt.",
 	"keywords": [ "livro de reclamações", "complaints book", "reclamações", "portugal" ],
-	"version": "1.1",
+	"version": "1.2",
 	"textdomain": "nakedcat-logo-livro-reclamacoes",
 	"attributes": {
 		"lettersFilled": {

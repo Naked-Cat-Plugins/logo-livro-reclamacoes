@@ -4,7 +4,7 @@ Tags: livro de reclamações, complaints book, portugal, legal, compliance
 Requires at least: 6.2
 Tested up to: 7.1
 Requires PHP: 7.2
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -85,6 +85,9 @@ You can report any security bugs found in the source code of this plugin through
 2. The logo rendered on the frontend
 
 == Changelog ==
+
+= 1.2 - 2026-08-16 =
+* [FIX] In the block editor, when a page had more than one logo, all of them showed the colour of the last one. The front end was never affected.
 
 = 1.1 - 2026-08-16 =
 * [NEW] Block icon, showing the logo itself in the block editor, and a more fitting icon on the WordPress.org plugin page
