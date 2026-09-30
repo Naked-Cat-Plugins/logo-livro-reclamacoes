@@ -57,6 +57,7 @@ This plugin helps you display the official “Livro de Reclamações Eletrónico
 
 = Our other premium plugins for the Portuguese market =
 
+* [EU Guarantee Notice and GARAN Label for WordPress and WooCommerce](https://nakedcatplugins.com/product/eu-guarantee-notice-and-garan-label-for-wordpress-and-woocommerce/) - Show the mandatory EU guarantee notice and the EU GARAN label with the official European Commission artwork, and let Proof of Notice check every day that the notice is still on your site
 * [Multibanco, MB WAY, Credit card, Apple Pay, Google Pay, Payshop, Cofidis Pay, and PIX (ifthenpay) for WooCommerce – PRO add-on](https://nakedcatplugins.com/product/multibanco-mbway-credit-card-payshop-ifthenpay-woocommerce-pro-add-on/) - Extra features for the plugin you already trust to receive payments on your WooCommerce store
 * [Invoicing with InvoiceXpress for WooCommerce – Pro](https://nakedcatplugins.com/product/invoicing-with-invoicexpress-for-woocommerce-pro/) - Automatically issue invoices directly from the WooCommerce order, with all the advanced features
 * [DPD Portugal for WooCommerce](https://nakedcatplugins.com/product/dpd-portugal-for-woocommerce/) - Create shipping and return guides in the DPD webservice directly from the WooCommerce order
