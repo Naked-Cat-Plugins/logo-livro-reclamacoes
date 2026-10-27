@@ -76,6 +76,12 @@ This plugin helps you display the official “Livro de Reclamações Eletrónico
 
 Yes. This plugin has no dependency on WooCommerce, it works on any WordPress site.
 
+= Is displaying the logo enough to comply with the law? =
+
+No. Displaying the logo and link on your website is only part of the obligation. Under Decreto-Lei 156/2005 (as amended), all suppliers of goods and service providers must make the complaints book available, and to do so they must be registered on the Livro de Reclamações Eletrónico platform. Showing the logo on your website does not make you compliant if your business is not registered there.
+
+If your business is not registered yet, sign up in the [business operators area](https://www.livroreclamacoes.pt/Utilizador/AutenticacaoOperador) (“Se não tiver conta, registe-se aqui”). Once registered, you log in there to view and handle the complaints submitted about your business.
+
 = Where do I report security vulnerabilities found in this plugin? =
 
 You can report any security bugs found in the source code of this plugin through the Patchstack Vulnerability Disclosure Program. (link available soon)
