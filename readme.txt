@@ -25,7 +25,7 @@ This is an independent third-party plugin and is not affiliated with, endorsed b
 * **Width**: any CSS width value; height always scales automatically and the logo never exceeds the width of its container
 * **Link target**: open in a new tab (default) or the same tab
 
-This plugin works on any WordPress site, it has no dependency on WooCommerce or any other plugin.
+This plugin works on any WordPress site: it has no dependency on WooCommerce or any other plugin.
 
 = Shortcode arguments =
 
@@ -45,11 +45,11 @@ This plugin helps you display the official “Livro de Reclamações Eletrónico
 
 = Our other free plugins for the Portuguese market =
 
-* [Multibanco, MB WAY, Credit card, Apple Pay, Google Pay, Payshop, Cofidis Pay, and PIX (ifthenpay) for WooCommerce](https://wordpress.org/plugins/multibanco-ifthen-software-gateway-for-woocommerce/) - Receive payments on your WooCommerce store through the Portuguese payment methods offered by ifthenpay
-* [Invoicing with InvoiceXpress for WooCommerce – Free](https://wordpress.org/plugins/woo-billing-with-invoicexpress/) - Automatically issue invoices directly from the WooCommerce order
-* [Payment Multibanco and MB WAY for FluentCart via ifthenpay](https://wordpress.org/plugins/payment-multibanco-for-fluent-cart-via-ifthenpay/) - Receive Multibanco and MB WAY payments on your FluentCart store
+* [Multibanco, MB WAY, Credit card, Apple Pay, Google Pay, Payshop, and PIX (ifthenpay) for WooCommerce](https://wordpress.org/plugins/multibanco-ifthen-software-gateway-for-woocommerce/) - Receive payments on your WooCommerce store through the Portuguese payment methods offered by ifthenpay
+* [Invoicing with InvoiceXpress for WooCommerce - Free](https://wordpress.org/plugins/woo-billing-with-invoicexpress/) - Automatically issue invoices directly from the WooCommerce order
+* [Payment Multibanco, MB WAY and Credit card for FluentCart via ifthenpay](https://wordpress.org/plugins/payment-multibanco-for-fluent-cart-via-ifthenpay/) - Receive Multibanco, MB WAY and credit card payments on your FluentCart store
 * [Portugal DPD Pickup and Lockers network for WooCommerce](https://wordpress.org/plugins/portugal-chronopost-pickup-woocommerce/) - Deliver your orders on the DPD Portugal network of pickup points and lockers
-* [Feed KuantoKusta for WooCommerce – Free](https://wordpress.org/plugins/feed-kuantokusta-for-woocommerce/) - Publish your products on KuantoKusta with this easy to use feed generator
+* [Feed KuantoKusta for WooCommerce - Free](https://wordpress.org/plugins/feed-kuantokusta-for-woocommerce/) - Publish your products on KuantoKusta with this easy-to-use feed generator
 * [NIF (Num. de Contribuinte Português) for WooCommerce](https://wordpress.org/plugins/nif-num-de-contribuinte-portugues-for-woocommerce/) - Add the Portuguese VAT ID (NIF/NIPC) field to the checkout and to the orders
 * [Portugal States (Distritos) for WooCommerce](https://wordpress.org/plugins/portugal-states-distritos-for-woocommerce/) - Add the Portuguese districts, with proper address formatting
 * [Portugal VASP Expresso Kios network for WooCommerce](https://wordpress.org/plugins/portugal-vasp-kios-woocommerce/) - Deliver your orders on the VASP Expresso Kios network of pickup points
@@ -58,10 +58,10 @@ This plugin helps you display the official “Livro de Reclamações Eletrónico
 = Our other premium plugins for the Portuguese market =
 
 * [EU Guarantee Notice and GARAN Label for WordPress and WooCommerce](https://nakedcatplugins.com/product/eu-guarantee-notice-and-garan-label-for-wordpress-and-woocommerce/) - Show the mandatory EU guarantee notice and the EU GARAN label with the official European Commission artwork, and let Proof of Notice check every day that the notice is still on your site
-* [Multibanco, MB WAY, Credit card, Apple Pay, Google Pay, Payshop, Cofidis Pay, and PIX (ifthenpay) for WooCommerce – PRO add-on](https://nakedcatplugins.com/product/multibanco-mbway-credit-card-payshop-ifthenpay-woocommerce-pro-add-on/) - Extra features for the plugin you already trust to receive payments on your WooCommerce store
-* [Invoicing with InvoiceXpress for WooCommerce – Pro](https://nakedcatplugins.com/product/invoicing-with-invoicexpress-for-woocommerce-pro/) - Automatically issue invoices directly from the WooCommerce order, with all the advanced features
+* [Multibanco, MB WAY, Credit card, Apple Pay, Google Pay, Payshop, and PIX (ifthenpay) for WooCommerce - PRO add-on](https://nakedcatplugins.com/product/multibanco-mbway-credit-card-payshop-ifthenpay-woocommerce-pro-add-on/) - Extra features for the plugin you already trust to receive payments on your WooCommerce store
+* [Invoicing with InvoiceXpress for WooCommerce - Pro](https://nakedcatplugins.com/product/invoicing-with-invoicexpress-for-woocommerce-pro/) - Automatically issue invoices directly from the WooCommerce order, with all the advanced features
 * [DPD Portugal for WooCommerce](https://nakedcatplugins.com/product/dpd-portugal-for-woocommerce/) - Create shipping and return guides in the DPD webservice directly from the WooCommerce order
-* [DPD / Geopost Pickup and Lockers network for WooCommerce](https://nakedcatplugins.com/product/dpd-seur-geopost-pickup-and-lockers-network-for-woocommerce/) - Deliver your orders on the DPD and Geopost network of pickup points and lockers in 25 European countries
+* [DPD / Geopost Pickup and Lockers network for WooCommerce](https://nakedcatplugins.com/product/dpd-seur-geopost-pickup-and-lockers-network-for-woocommerce/) - Deliver your WooCommerce orders on the DPD, Chronopost, BRT, SEUR and PostNord Pickup network of Parcelshops and Lockers in 25 European countries
 * [Feed KuantoKusta for WooCommerce PRO add-on](https://nakedcatplugins.com/product/feed-kuantokusta-for-woocommerce-pro/) - Extra features for the KuantoKusta feed generator you already trust
 * [Portuguese Postcodes for WooCommerce](https://nakedcatplugins.com/product/portuguese-postcodes-for-woocommerce-technical-support/) - Automatic filling of the address details at the checkout, including street name and neighbourhood, based on the postal code
 
@@ -74,7 +74,7 @@ This plugin helps you display the official “Livro de Reclamações Eletrónico
 
 = Does this work without WooCommerce? =
 
-Yes. This plugin has no dependency on WooCommerce, it works on any WordPress site.
+Yes. This plugin has no dependency on WooCommerce: it works on any WordPress site.
 
 = Is displaying the logo enough to comply with the law? =
 
