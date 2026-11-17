@@ -12,7 +12,7 @@ Displays the official “Livro de Reclamações Eletrónico” logo, linked to l
 
 == Description ==
 
-Portuguese law (Decreto-Lei n.º 156/2005, as amended by Decreto-Lei n.º 74/2017, art. 9.º-A) requires businesses selling goods or services to consumers to provide visible, prominent access to the “Livro de Reclamações Eletrónico” on their website. Displaying the official logo, linked to livroreclamacoes.pt, is the standard way businesses satisfy this requirement.
+Portuguese law (Decreto-Lei n.º 156/2005, as amended by Decreto-Lei n.º 74/2017, art. 9.º-A) requires businesses selling goods or services to consumers to provide visible, prominent access to the “Livro de Reclamações Eletrónico” on their website. Displaying the official logo, linked to livroreclamacoes.pt, is the standard way to provide that access.
 
 This plugin adds that logo to your site in two ways, a `[livro_reclamacoes]` shortcode and a matching block, both sharing the exact same rendering code so the result is identical everywhere you use it.
 
@@ -21,7 +21,7 @@ This is an independent third-party plugin and is not affiliated with, endorsed b
 = Options =
 
 * **Fill inner letters**: the “LIVRO DE” lettering inside the circle can be left as transparent cutouts (default) or painted in a solid color
-* **Color**: official red (default), blue, black, white, or any custom color. When the inner letters are filled, their color is automatically paired for contrast (white on red/blue/black, black on white), or independently choosable when using a custom color
+* **Color**: official red (default), blue, black, white, or any custom color. When the inner letters are filled, their color is automatically paired for contrast (white on red/blue/black, black on white), or chosen separately when using a custom color
 * **Width**: any CSS width value; height always scales automatically and the logo never exceeds the width of its container
 * **Link target**: open in a new tab (default) or the same tab
 
@@ -84,7 +84,7 @@ If your business is not registered yet, sign up in the [business operators area]
 
 = Where do I report security vulnerabilities found in this plugin? =
 
-You can report any security bugs found in the source code of this plugin through the Patchstack Vulnerability Disclosure Program. (link available soon)
+You can report any security bugs found in the source code of this plugin through the [Patchstack Vulnerability Disclosure Program](https://patchstack.com/database/vdp/e0180f10-4352-4488-9d03-a50fb2934a06). The Patchstack team will assist you with verification, CVE assignment and take care of notifying the developers of this plugin.
 
 == Screenshots ==
 

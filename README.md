@@ -94,5 +94,4 @@ Can also be run manually via `workflow_dispatch` from the Actions tab.
 
 ## Reporting security issues
 
-Through the Patchstack Vulnerability Disclosure Program, once this plugin has a listed VDP entry
-(see `readme.txt`'s FAQ for the current status).
+Through the [Patchstack Vulnerability Disclosure Program](https://patchstack.com/database/vdp/e0180f10-4352-4488-9d03-a50fb2934a06).
